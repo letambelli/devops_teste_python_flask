@@ -24,13 +24,13 @@ jobs:
     - run: pytest
 
     - name: Deploy to Render
-    run: |
-      curl -X POST \
-        -H "Authorization: Bearer ${{ secrets.RENDER_API_KEY }}" \
-        -H "Accept: application/json" \
-        -H "Content-Type: application/json" \
-        --data '{"serviceId": "usr-crfpn6bqf0us73daf1r0"}' \
-        https://api.render.com/v1/services/usr-crfpn6bqf0us73daf1r0/deploys
+      run: |
+          curl -X POST \
+          -H "Authorization: Bearer ${{ secrets.RENDER_API_KEY }}" \
+          -H "Accept: application/json" \
+          -H "Content-Type: application/json" \
+          --data '{"serviceId": "usr-crfpn6bqf0us73daf1r0"}' \
+          https://api.render.com/v1/services/usr-crfpn6bqf0us73daf1r0/deploys
 
 
 
